@@ -59,7 +59,7 @@ const Hero = () => {
     <div className="flex flex-col-reverse md:flex-row justify-evenly items-center md:items-start mt-4 tracking-wide overflow-hidden">
       <div className="w-full md:w-1/2 flex flex-col gap-12 mt-10 md:mt-20 overflow-hidden">
         <motion.div
-          initial={{ x: -400 }}
+          initial={{ x: -200 }}
           whileInView={{
             x: 0,
             transition: { duration: 1, type: "spring", mass: 0.7 },
@@ -72,7 +72,7 @@ const Hero = () => {
           </h1>
         </motion.div>
         <motion.p
-          initial={{ x: 400 }}
+          initial={{ x: 200 }}
           whileInView={{
             x: 0,
             transition: { duration: 1, type: "spring", mass: 0.7 },
@@ -87,7 +87,7 @@ const Hero = () => {
         </motion.p>
 
         <motion.div
-          initial={{ x: -200, scale: 0 }}
+          initial={{ x: -100, scale: 0 }}
           whileInView={{ x: 0, scale: 1, transition: { duration: 1.5 } }}
         >
           <Button
@@ -103,7 +103,7 @@ const Hero = () => {
           initial="hidden"
           animate={"visible"}
           whileInView={"visible"}
-          className="flex items-center justify-evenly md:justify-normal gap-4 mt-2 text-xl"
+          className="flex items-center justify-evenly md:justify-normal gap-4 mt-2 text-2xl"
         >
           {social.map((ele, ind) => (
             <motion.span key={ind} variants={anchorVariants}>
@@ -114,9 +114,9 @@ const Hero = () => {
       </div>
 
       <motion.div
-        initial={{ x: 0, y: 0 }}
+        initial={{ x: 10, y: 0 }}
         whileInView={{
-          y: -50,
+          y: -40,
           transition: {
             duration: 1.5,
             delay: 1,
