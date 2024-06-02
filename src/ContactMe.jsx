@@ -38,17 +38,23 @@ const ContactMe = () => {
       );
   };
   return (
-    <div className="">
+    <div className="" id="Contact">
       <hr />
-      <div className="my-10 text-2xl md:text-6xl text-purple-800">
+      <div className="my-10 text-2xl md:text-5xl font-bold text-purple-800">
         Contact Me
       </div>
-      <div className="flex flex-col md:flex-row justify-between ">
-        <div className="flex flex-col gap-4 w-[60%]">
+
+      <div className="flex flex-col md:flex-row  gap-56 ">
+        <div className="flex flex-col items-center justify-center gap-4 w-[70%]">
+          <h1 className="text-light-blue-800 text-xl">
+            I am eager to discuss how my skills and experience can contribute to
+            your organization's success. Please feel free to contact me to
+            discuss potential opportunities.
+          </h1>
           <Input
             label="Full Name"
             color="deep-orange"
-            className="dark:text-gray-300"
+            className="dark:text-gray-300 "
             name="from_name"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -89,8 +95,12 @@ const ContactMe = () => {
             send
           </Button>
         </div>
-        <div className=" flex flex-col me-10 gap-10 justify-center my-6">
-          <div className="text-xl md:text-4xl text-pink-900">Social Media</div>
+
+        <div className=" flex flex-col me-10 gap-10 items-start my-6">
+          {/* <h1>or visit my profiles on social media</h1> */}
+          <div className="text-xl md:text-3xl text-pink-900">
+            Or Visit My Profiles On Social Media
+          </div>
           <div className="flex justify-evenly items-center gap-8 mt-2 text-xl md:text-3xl">
             <a
               href="https://www.linkedin.com/in/jamal-nabaa-01?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"

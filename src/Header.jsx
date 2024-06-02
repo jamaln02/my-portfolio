@@ -18,7 +18,7 @@ function NavList() {
         className="p-1 font-medium hover:underline underline-offset-8"
       >
         <a
-          href="#"
+          href="#About"
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           About me
@@ -31,7 +31,20 @@ function NavList() {
         className="p-1 font-medium hover:underline underline-offset-8"
       >
         <a
-          href="#"
+          href="#skills"
+          className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
+        >
+          Skills
+        </a>
+      </Typography>
+      <Typography
+        as="li"
+        variant="small"
+        color="blue-gray"
+        className="p-1 font-medium hover:underline underline-offset-8"
+      >
+        <a
+          href="#Projects"
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           Projects
@@ -44,7 +57,7 @@ function NavList() {
         className="p-1 font-medium hover:underline underline-offset-8"
       >
         <a
-          href="#"
+          href="#Contact"
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           Contact me
@@ -56,10 +69,7 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a
-          href="#"
-          className="flex items-center dark:text-gray-300 transition-colors "
-        >
+        <a className="flex items-center dark:text-gray-300 transition-colors cursor-pointer">
           <DarkLightMode />
         </a>
       </Typography>

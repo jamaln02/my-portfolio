@@ -7,9 +7,11 @@ import town from "./assets/town.png";
 
 const Projects = () => {
   return (
-    <div className="my-10">
+    <div className="my-10" id="Projects">
       <hr />
-      <div className="my-10 text-2xl md:text-6xl text-purple-800">Projects</div>
+      <div className="my-10 text-2xl md:text-5xl font-bold text-purple-800">
+        Projects
+      </div>
 
       <div className="flex flex-wrap gap-5 justify-evenly items-center">
         <div className="w-3/4 md:w-1/3">
