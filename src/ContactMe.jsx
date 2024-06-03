@@ -97,7 +97,6 @@ const ContactMe = () => {
         </div>
 
         <div className=" flex flex-col me-10 gap-10 items-start my-6">
-          {/* <h1>or visit my profiles on social media</h1> */}
           <div className="text-xl md:text-3xl text-pink-900">
             Or Visit My Profiles On Social Media
           </div>

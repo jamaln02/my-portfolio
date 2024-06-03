@@ -7,8 +7,50 @@ import next from "./assets/next.png";
 import bootstrap from "./assets/bootstrap.png";
 import tailwind from "./assets/tailwind.png";
 import git from "./assets/git.png";
+import github from "./assets/github.png";
 import redux from "./assets/redux.png";
+import { motion, reverseEasing } from "framer-motion";
 const Skills = () => {
+  const icons = [
+    { name: "Html 5", img: html },
+    { name: "Css 3", img: css },
+    { name: "Javascript", img: javascript },
+    { name: "React js", img: react },
+    { name: "Next", img: next },
+    { name: "Bootstrap", img: bootstrap },
+    { name: "Tailwind", img: tailwind },
+    { name: "Git", img: git },
+    { name: "GitHub", img: github },
+    { name: "Redux", img: redux },
+  ];
+
+  const parentVariants = {
+    hidden: {
+      y: 10,
+    },
+    visible: {
+      y: 0,
+      transition: {
+        staggerChildren: 0.8,
+      },
+    },
+  };
+
+  const childVariants = {
+    hidden: {
+      y: 10,
+    },
+    visible: {
+      y: 0,
+      transition: {
+        duration: 1.2,
+        repeat: Infinity,
+        repeatType: "reverse",
+        reverseEasing: reverseEasing,
+      },
+    },
+  };
+
   return (
     <div className="my-5" id="skills">
       <hr />
@@ -53,50 +95,32 @@ const Skills = () => {
           non-technical audiences
         </li>
       </ul>
-      <div className="flex justify-evenly items-center gap-3 flex-wrap ">
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={html} alt="html icon" />
-          <p>HTML 5</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={css} alt="css icon" />
-          <p>CSS 3</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          {" "}
-          <img width={45} src={javascript} alt="js icon" />
-          <p>JS</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={react} alt="react icon" />
-          <p>React js</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img
-            width={45}
-            src={next}
-            alt="nextjs icon"
-            className="bg-gray-400"
-          />
-          <p>Next Js</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={bootstrap} alt="bootstrap icon" />
-          <p>Bootstrap</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={tailwind} alt="tailwind icon" />
-          <p>Tailwind css</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={git} alt="git icon" />
-          <p>Git & Github</p>
-        </div>
-        <div className="flex flex-col items-center gap-2">
-          <img width={45} src={redux} alt="redux icon" />
-          <p>Redux & Reduxtoolkit </p>
-        </div>
-      </div>
+      <motion.div
+        variants={parentVariants}
+        initial="hidden"
+        animate="visible"
+        className="flex justify-evenly items-center gap-3 flex-wrap "
+      >
+        {icons.map((ele, ind) => (
+          <motion.div
+            variants={childVariants}
+            className="flex flex-col items-center gap-2"
+          >
+            {ele.img == next ? (
+              <img
+                width={45}
+                src={ele.img}
+                alt={`${ele.name} icon`}
+                className="bg-gray-400"
+              />
+            ) : (
+              <img width={45} src={ele.img} alt={`${ele.name} icon`} />
+            )}
+
+            <p>{ele.name}</p>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };

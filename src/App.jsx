@@ -17,6 +17,7 @@ function App() {
           height: "10px",
           width: "100%",
           position: "fixed",
+          zIndex: 1000,
         }}
       />
 

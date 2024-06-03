@@ -1,6 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 
+import Typed from "typed.js";
 const AboutMe = () => {
+  const el = React.useRef(null);
+
+  React.useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Hello, I am Jamal Nabaa from Syria and I live in Egypt"],
+      typeSpeed: 50,
+      loop: true,
+      backDelay: 5000,
+    });
+
+    return () => {
+      // Destroy Typed instance during cleanup to stop animation
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <div className="" id="About">
       <hr className="my-10" />
@@ -10,7 +28,7 @@ const AboutMe = () => {
 
       <div className="my-6">
         <h1 className="text-3xl leading-10 tracking-wide">
-          Hello, I am Jamal Nabaa from Syria and I live in Egypt
+          <span ref={el} />
         </h1>
 
         <p className="text-xl leading-10 my-2 tracking-wide">

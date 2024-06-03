@@ -11,7 +11,7 @@ import {
 import hand from "./assets/hand.png";
 
 import { Button } from "@material-tailwind/react";
-import { motion } from "framer-motion";
+import { motion, stagger } from "framer-motion";
 const Hero = () => {
   const social = [
     <a
@@ -36,25 +36,7 @@ const Hero = () => {
       <FaFacebook />
     </a>,
   ];
-  const socialVariants = {
-    hidden: {
-      y: 100,
-    },
-    visible: {
-      y: 0,
-      staggerChildren: 1,
-      transition: { duration: 1.5 },
-    },
-  };
-  const anchorVariants = {
-    hidden: {
-      opacity: 0,
-    },
-    visible: {
-      opacity: 1,
-      transition: { duration: 1.5 },
-    },
-  };
+
   return (
     <div className="flex flex-col-reverse md:flex-row justify-evenly items-center md:items-start mt-4 tracking-wide overflow-hidden">
       <div className="w-full md:w-1/2 flex flex-col gap-12 mt-10 md:mt-20 overflow-hidden">
@@ -98,19 +80,25 @@ const Hero = () => {
             Download my Cv
           </Button>
         </motion.div>
-        <motion.div
-          variants={socialVariants}
-          initial="hidden"
-          animate={"visible"}
-          whileInView={"visible"}
-          className="flex items-center justify-evenly md:justify-normal gap-4 mt-2 text-2xl"
-        >
+        <div className="flex items-center justify-evenly md:justify-normal gap-4 mt-2 text-2xl ">
           {social.map((ele, ind) => (
-            <motion.span key={ind} variants={anchorVariants}>
+            <motion.span
+              initial={{ translateY: -100, opacity: 0 }}
+              whileInView={{
+                translateY: 0,
+                opacity: 1,
+                transition: {
+                  staggerChildren: 0.08,
+                  duration: 1,
+                  type: "spring",
+                },
+              }}
+              key={ind}
+            >
               {ele}
             </motion.span>
           ))}
-        </motion.div>
+        </div>
       </div>
 
       <motion.div
