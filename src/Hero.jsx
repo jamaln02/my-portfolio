@@ -38,7 +38,10 @@ const Hero = () => {
   ];
 
   return (
-    <div className="flex flex-col-reverse md:flex-row justify-evenly items-center md:items-start mt-4 tracking-wide overflow-hidden">
+    <div
+      className="flex flex-col-reverse md:flex-row justify-evenly items-center md:items-start mt-4 tracking-wide overflow-hidden"
+      id="/"
+    >
       <div className="w-full md:w-1/2 flex flex-col gap-12 mt-10 md:mt-20 overflow-hidden">
         <motion.div
           initial={{ x: -200 }}

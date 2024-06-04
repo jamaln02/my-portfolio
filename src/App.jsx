@@ -6,10 +6,11 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import ContactMe from "./ContactMe";
 import { motion, useScroll } from "framer-motion";
+import Footer from "./Footer";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
-    <main>
+    <main className="dark:bg-gray-900 dark:text-gray-300 pb-2">
       <motion.div
         style={{
           scaleX: scrollYProgress,
@@ -20,15 +21,15 @@ function App() {
           zIndex: 1000,
         }}
       />
-
+      <Header />
       <section className=" dark:bg-gray-900 dark:text-gray-300 p-10 pt-2">
-        <Header />
         <Hero />
         <AboutMe />
         <Skills />
         <Projects />
         <ContactMe />
       </section>
+      <Footer />
     </main>
   );
 }

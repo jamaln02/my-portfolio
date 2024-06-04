@@ -7,6 +7,7 @@ import {
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import DarkLightMode from "./DarkLightMode";
+import { Link } from "react-scroll";
 
 function NavList() {
   return (
@@ -17,12 +18,17 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a
-          href="#About"
+        <Link
+          activeClass="active"
+          to="About"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={800}
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           About me
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -30,12 +36,17 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a
-          href="#skills"
+        <Link
+          activeClass="active"
+          to="skills"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={900}
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           Skills
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -43,12 +54,17 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a
-          href="#Projects"
+        <Link
+          activeClass="active"
+          to="Projects"
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={1000}
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           Projects
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -56,12 +72,17 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a
-          href="#Contact"
+        <Link
+          activeClass="active"
+          to="Contact"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={700}
           className="flex items-center dark:text-gray-300 transition-colors hover:text-orange-900 dark:hover:text-orange-900"
         >
           Contact me
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"
@@ -69,9 +90,9 @@ function NavList() {
         color="blue-gray"
         className="p-1 font-medium hover:underline underline-offset-8"
       >
-        <a className="flex items-center dark:text-gray-300 transition-colors cursor-pointer">
+        <Link className="flex items-center dark:text-gray-300 transition-colors cursor-pointer">
           <DarkLightMode />
-        </a>
+        </Link>
       </Typography>
     </ul>
   );
@@ -92,11 +113,15 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-lg px-6 py-3 bg-transparent bg-opacity-0 border-none shadow-none ">
+    <Navbar className="mx-auto max-w-screen-3xl px-6 py-3 bg-transparent !bg-opacity-60 dark:!bg-gray-900 !bg-white   border-none shadow-none fixed \ z-30">
       <div className="flex items-center justify-between text-blue-gray-900  dark:text-gray-300">
         <Typography
-          as="a"
-          href="#"
+          as={Link}
+          spy={true}
+          smooth={true}
+          offset={-100}
+          duration={500}
+          to="/"
           variant="h5"
           className="mr-4 cursor-pointer py-1.5 "
         >

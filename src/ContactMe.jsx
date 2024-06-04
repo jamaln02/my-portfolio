@@ -2,6 +2,7 @@ import { Button, Input, Textarea } from "@material-tailwind/react";
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FaFacebook, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
+import { motion } from "framer-motion";
 const ContactMe = () => {
   const [userMessage, setUserMessage] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -45,7 +46,11 @@ const ContactMe = () => {
       </div>
 
       <div className="flex flex-col md:flex-row  gap-56 ">
-        <div className="flex flex-col items-center justify-center gap-4 w-[70%]">
+        <motion.div
+          initial={{ x: -300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+          className="flex flex-col items-center justify-center gap-4 w-[70%]"
+        >
           <h1 className="text-light-blue-800 text-xl">
             I am eager to discuss how my skills and experience can contribute to
             your organization's success. Please feel free to contact me to
@@ -94,9 +99,13 @@ const ContactMe = () => {
           >
             send
           </Button>
-        </div>
+        </motion.div>
 
-        <div className=" flex flex-col me-10 gap-10 items-start my-6">
+        <motion.div
+          initial={{ x: 300, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
+          className=" flex flex-col me-10 gap-10 items-start my-6"
+        >
           <div className="text-xl md:text-3xl text-pink-900">
             Or Visit My Profiles On Social Media
           </div>
@@ -126,14 +135,7 @@ const ContactMe = () => {
               <FaFacebook />
             </a>
           </div>
-        </div>
-      </div>
-      <div className="my-10">
-        <hr />
-        <h1 className="my-3 text-3xl md:text-6xl text-center tracking-widest text-purple-900 font-bold">
-          Thanks For Watching{" "}
-        </h1>
-        <hr />
+        </motion.div>
       </div>
     </div>
   );
