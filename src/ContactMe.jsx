@@ -49,7 +49,7 @@ const ContactMe = () => {
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-          className="flex flex-col items-center justify-center gap-4 w-[70%]"
+          className="flex flex-col items-center justify-center gap-4 w-full md:w-[70%]"
         >
           <h1 className="text-light-blue-800 text-xl">
             I am eager to discuss how my skills and experience can contribute to

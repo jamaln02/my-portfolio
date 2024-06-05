@@ -10,7 +10,7 @@ import Footer from "./Footer";
 function App() {
   const { scrollYProgress } = useScroll();
   return (
-    <main className="dark:bg-gray-900 dark:text-gray-300 pb-2">
+    <main className="dark:bg-gray-900 dark:text-gray-300 p-2 pt-0">
       <motion.div
         style={{
           scaleX: scrollYProgress,
@@ -22,7 +22,7 @@ function App() {
         }}
       />
       <Header />
-      <section className=" dark:bg-gray-900 dark:text-gray-300  md:p-10 pt-2">
+      <section className=" dark:bg-gray-900 dark:text-gray-300 p-6 md:p-10 pt-2">
         <Hero />
         <AboutMe />
         <Skills />

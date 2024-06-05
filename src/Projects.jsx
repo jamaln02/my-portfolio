@@ -63,7 +63,7 @@ const Projects = () => {
         Projects
       </div>
 
-      <div className="flex flex-wrap gap-5 justify-evenly items-center">
+      <div className="flex flex-wrap gap-5 justify-evenly items-center overflow-hidden">
         {linksData.map(({ github, live, alt, name }) => (
           <motion.div
             initial={{ y: 200, x: -200, opacity: 0 }}
@@ -71,7 +71,7 @@ const Projects = () => {
               y: 0,
               x: 0,
               opacity: 1,
-              transition: { duration: 1.2 },
+              transition: { duration: 0.5 },
             }}
             className="w-full md:w-1/3   rounded-md"
           >
@@ -103,7 +103,7 @@ const Projects = () => {
                   </a>
                 </div>
               </CardHeader>
-              <CardBody className="pb-0 mb-0 text-lg tracking-wide">
+              <CardBody className="pb-1 mb-0 text-lg tracking-wide">
                 <p className="font-bold p-1 text-lg text-blue-900">
                   <span className="text-gray-300 font-bold ">name : </span>{" "}
                   {alt}
@@ -181,11 +181,6 @@ const Projects = () => {
                   )}
                 </Typography>
               </CardBody>
-              {/* <CardFooter className="flex justify-center gap-7 pt-2">
-                {alt === "E-market" && (
-                  
-                )}
-              </CardFooter> */}
             </Card>
           </motion.div>
         ))}
