@@ -113,7 +113,7 @@ const Header = () => {
   }, []);
 
   return (
-    <Navbar className="mx-auto max-w-screen-3xl px-6 py-3 bg-transparent !bg-opacity-60 dark:!bg-gray-900 !bg-white   border-none shadow-none fixed \ z-30">
+    <Navbar className="mx-auto max-w-screen-4xl px-6 py-3 bg-transparent !bg-opacity-60 dark:!bg-gray-900 !bg-white   border-none shadow-none fixed \ z-30">
       <div className="flex items-center justify-between text-blue-gray-900  dark:text-gray-300">
         <Typography
           as={Link}

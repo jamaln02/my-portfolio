@@ -45,9 +45,9 @@ const ContactMe = () => {
         Contact Me
       </div>
 
-      <div className="flex flex-col md:flex-row  gap-56 ">
+      <div className="flex flex-col md:flex-row  gap-56 overflow-hidden">
         <motion.div
-          initial={{ x: -300, opacity: 0 }}
+          initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
           className="flex flex-col items-center justify-center gap-4 w-[70%]"
         >
@@ -102,7 +102,7 @@ const ContactMe = () => {
         </motion.div>
 
         <motion.div
-          initial={{ x: 300, opacity: 0 }}
+          initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
           className=" flex flex-col me-10 gap-10 items-start my-6"
         >
