@@ -15,6 +15,7 @@ import {
   CardFooter,
   Typography,
 } from "@material-tailwind/react";
+import { ReadMoreAndLess } from "read-more-and-less/dist/components/ReadMoreAndLess";
 const Projects = () => {
   const linksData = [
     {
@@ -56,7 +57,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="my-10" id="Projects">
+    <div className="my-10 p-2" id="Projects">
       <hr />
       <div className="my-10 text-2xl md:text-5xl font-bold text-purple-800">
         Projects
@@ -72,10 +73,13 @@ const Projects = () => {
               opacity: 1,
               transition: { duration: 1.2 },
             }}
-            className="w-3/4 md:w-1/3 group relative overflow-hidden cursor-pointer rounded-md"
+            className="w-full md:w-1/3   rounded-md"
           >
-            <Card className="w-full min-h-[450px] bg-gray-700 text-gray-300 ">
-              <CardHeader floated={false} className="p-0 m-1 ">
+            <Card className="w-full h-full bg-gray-700 text-gray-300 ">
+              <CardHeader
+                floated={false}
+                className="p-0 m-1 group relative overflow-hidden cursor-pointer"
+              >
                 <img
                   src={name}
                   alt={alt}
@@ -100,12 +104,18 @@ const Projects = () => {
                 </div>
               </CardHeader>
               <CardBody className="pb-0 mb-0 text-lg tracking-wide">
-                <p className="font-bold text-center p-3 text-lg text-blue-900">
+                <p className="font-bold p-1 text-lg text-blue-900">
+                  <span className="text-gray-300 font-bold ">name : </span>{" "}
                   {alt}
                 </p>
-                {alt === "E-market" && (
-                  <Typography>
-                    This E-commerce website was built with NEXT JS and Redux
+                <Typography className="text-orange-600">
+                  <span className="text-gray-300 font-bold">
+                    description :{" "}
+                  </span>
+                  {alt === "E-market" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text=" This E-commerce website was built with NEXT JS and Redux
                     Toolkit NEXT helped us maximize the site's visibility in
                     search engines We worked on the design using the MATRIAL
                     TAILWIND library for a more attractive design There's a
@@ -113,12 +123,13 @@ const Projects = () => {
                     add to cart feature. I was quick to code and develop this
                     project, of course, by sticking to the code, organizing the
                     files, and making sure that making sure everything works
-                    without issues.
-                  </Typography>
-                )}
-                {alt === "Movie mania" && (
-                  <Typography>
-                    I worked on this project using react js library, tailwind
+                    without issues.   "
+                    />
+                  )}
+                  {alt === "Movie mania" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text="I worked on this project using react js library, tailwind
                     matrial in design and react slik library. Through the site,
                     you can see all the details of the movie or series you like
                     and all the artists and staff with the ability to see all
@@ -127,43 +138,48 @@ const Projects = () => {
                     photos and reviews There is a search feature and a theme
                     feature from dark to light It was one of the projects that
                     took me the most time and effort because it has a lot of
-                    details
-                  </Typography>
-                )}
-                {alt === "Fashion Store" && (
-                  <Typography>
-                    This project I built the front and back end but the data was
+                    details   "
+                    />
+                  )}
+                  {alt === "Fashion Store" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text="This project I built the front and back end but the data was
                     uploaded to render so unfortunately you won't be able to see
                     it unless you contact me. In this project, I worked on the
                     login system, user data registration and validation, and the
                     user can change his data after logging in. There is an admin
                     dashboard for the administrator to be able to manage the
                     site, whether in terms of users or products It was built
-                    using React JS, Tailwind CSS, and json server.
-                  </Typography>
-                )}
-                {alt === "Dokan Shop" && (
-                  <Typography>
-                    This project is an e-commerce landing page It was
+                    using React JS, Tailwind CSS, and json server.   "
+                    />
+                  )}
+                  {alt === "Dokan Shop" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text="This project is an e-commerce landing page It was
                     professionally designed as it was 100% customized. I worked
-                    on it using only html, css, javascript{" "}
-                  </Typography>
-                )}
-                {alt === "Town" && (
-                  <Typography>
-                    A simple project to design a beautiful and elegant landing
-                    page It was one of my first exercises in html css javascript{" "}
-                  </Typography>
-                )}
-                {alt === "facebook clone" && (
-                  <Typography>
-                    This project is a simulation of Facebook's login and signup
+                    on it using only html, css, javascript.  "
+                    />
+                  )}
+                  {alt === "Town" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text="A simple project to design a beautiful and elegant landing
+                    page It was one of my first exercises in html css javascript.   "
+                    />
+                  )}
+                  {alt === "facebook clone" && (
+                    <ReadMoreAndLess
+                      charLimit={50}
+                      text="This project is a simulation of Facebook's login and signup
                     interface It is not just a design, it improves the user
                     experience when entering wrong data, unauthorized words,
                     number of letters or numbers, and email validation. It was
-                    built using html, css, javascript and bootstrap library{" "}
-                  </Typography>
-                )}
+                    built using html, css, javascript and bootstrap library.   "
+                    />
+                  )}
+                </Typography>
               </CardBody>
               {/* <CardFooter className="flex justify-center gap-7 pt-2">
                 {alt === "E-market" && (

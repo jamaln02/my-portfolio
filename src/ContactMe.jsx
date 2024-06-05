@@ -39,13 +39,13 @@ const ContactMe = () => {
       );
   };
   return (
-    <div className="" id="Contact">
+    <div className="container mx-auto" id="Contact">
       <hr />
       <div className="my-10 text-2xl md:text-5xl font-bold text-purple-800">
         Contact Me
       </div>
 
-      <div className="flex flex-col md:flex-row  gap-56 overflow-hidden">
+      <div className="flex flex-col md:flex-row gap-10 md:gap-56 overflow-hidden">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
@@ -104,9 +104,9 @@ const ContactMe = () => {
         <motion.div
           initial={{ x: 100, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1, transition: { duration: 1 } }}
-          className=" flex flex-col me-10 gap-10 items-start my-6"
+          className=" flex flex-col md:me-10 gap-10 items-start my-6"
         >
-          <div className="text-xl md:text-3xl text-pink-900">
+          <div className=" text-xl md:text-3xl text-pink-900">
             Or Visit My Profiles On Social Media
           </div>
           <div className="flex justify-evenly items-center gap-8 mt-2 text-xl md:text-3xl">

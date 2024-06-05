@@ -12,6 +12,7 @@ import hand from "./assets/hand.png";
 
 import { Button } from "@material-tailwind/react";
 import { motion, stagger } from "framer-motion";
+import cv from "./assets/jamal-nabaa.pdf";
 const Hero = () => {
   const social = [
     <a
@@ -78,8 +79,10 @@ const Hero = () => {
           <Button
             variant="gradient"
             className="flex items-center gap-3 w-full md:w-3/6"
+            onClick={() => window.print(cv, "_blank")}
           >
             <FaCloudDownloadAlt className="text-2xl" />
+            <a></a>
             Download my Cv
           </Button>
         </motion.div>

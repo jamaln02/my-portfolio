@@ -22,7 +22,7 @@ function App() {
         }}
       />
       <Header />
-      <section className=" dark:bg-gray-900 dark:text-gray-300 p-10 pt-2">
+      <section className=" dark:bg-gray-900 dark:text-gray-300  md:p-10 pt-2">
         <Hero />
         <AboutMe />
         <Skills />
