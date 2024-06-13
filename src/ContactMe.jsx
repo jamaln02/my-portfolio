@@ -111,7 +111,7 @@ const ContactMe = () => {
           </div>
           <div className="flex justify-evenly items-center gap-8 mt-2 text-xl md:text-3xl">
             <a
-              href="https://www.linkedin.com/in/jamal-nabaa-01?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              href="https://www.linkedin.com/in/jamalnabaa"
               className="hover:text-blue-900"
             >
               <FaLinkedin />

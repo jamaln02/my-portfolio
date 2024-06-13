@@ -12,11 +12,11 @@ import hand from "./assets/hand.png";
 
 import { Button } from "@material-tailwind/react";
 import { motion, stagger } from "framer-motion";
-import cv from "./assets/jamal-nabaa.pdf";
+import cv from "./assets/jamal nabaa.pdf";
 const Hero = () => {
   const social = [
     <a
-      href="https://www.linkedin.com/in/jamal-nabaa-01?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+      href="https://www.linkedin.com/in/jamalnabaa"
       className="hover:text-blue-900"
     >
       <FaLinkedin />
