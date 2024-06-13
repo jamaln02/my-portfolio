@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import market from "./assets/market.png";
 import movie from "./assets/movie.png";
 import fashion from "./assets/fashion.png";
@@ -16,6 +16,24 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { ReadMoreAndLess } from "read-more-and-less/dist/components/ReadMoreAndLess";
+import LazyLoad from "react-lazyload";
+
+const Element = ({ index }) => (
+  <LazyLoad height={200} offset={100}>
+    <motion.div
+      initial={{ y: 200, x: -200, opacity: 0 }}
+      whileInView={{
+        y: 0,
+        x: 0,
+        opacity: 1,
+        transition: { duration: 0.5 },
+      }}
+    >
+      Element {index + 1}
+    </motion.div>
+  </LazyLoad>
+);
+
 const Projects = () => {
   const linksData = [
     {
@@ -64,7 +82,7 @@ const Projects = () => {
       </div>
 
       <div className="flex flex-wrap gap-5 justify-evenly items-center overflow-hidden">
-        {linksData.map(({ github, live, alt, name }) => (
+        {linksData.map(({ github, live, alt, name }, index) => (
           <motion.div
             initial={{ y: 200, x: -200, opacity: 0 }}
             whileInView={{
