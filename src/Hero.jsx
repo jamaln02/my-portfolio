@@ -76,15 +76,16 @@ const Hero = () => {
           initial={{ x: -100, scale: 0 }}
           whileInView={{ x: 0, scale: 1, transition: { duration: 1.5 } }}
         >
-          <Button
-            variant="gradient"
-            className="flex items-center gap-3 w-full md:w-3/6"
-            onClick={() => window.print(cv, "_blank")}
-          >
-            <FaCloudDownloadAlt className="text-2xl" />
-            <a></a>
-            Download my Cv
-          </Button>
+          <a href={cv} download target="_blank">
+            {" "}
+            <Button
+              variant="gradient"
+              className="flex items-center gap-3 w-full md:w-3/6"
+            >
+              <FaCloudDownloadAlt className="text-2xl" />
+              Download my Cv
+            </Button>{" "}
+          </a>
         </motion.div>
         <div className="flex items-center justify-evenly md:justify-normal gap-4 mt-2 text-2xl ">
           {social.map((ele, ind) => (
