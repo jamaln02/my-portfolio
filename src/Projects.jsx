@@ -162,14 +162,7 @@ const Projects = () => {
                   {alt === "Fashion Store" && (
                     <ReadMoreAndLess
                       charLimit={50}
-                      text="This project I built the front and back end but the data was
-                    uploaded to render so unfortunately you won't be able to see
-                    it unless you contact me. In this project, I worked on the
-                    login system, user data registration and validation, and the
-                    user can change his data after logging in. There is an admin
-                    dashboard for the administrator to be able to manage the
-                    site, whether in terms of users or products It was built
-                    using React JS, Tailwind CSS, and json server.   "
+                      text="I worked on this e-commerce project using React.js and Tailwind. There are two types of users: regular users can browse products and add them to their cart, while admins have a dashboard to manage users and products. The admin dashboard shows stats like total users, products, and recent activities. To view the admin dashboard, use jamal@gmail.com and password 121212."
                     />
                   )}
                   {alt === "Dokan Shop" && (
