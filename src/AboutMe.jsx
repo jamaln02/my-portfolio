@@ -7,7 +7,7 @@ const AboutMe = () => {
 
   React.useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Hello, I am Jamal Nabaa from Syria and I live in Egypt"],
+      strings: ["Hello, I am Jamal Nabaa from Syria "],
       typeSpeed: 50,
       loop: true,
       backDelay: 5000,
