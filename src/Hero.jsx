@@ -12,7 +12,7 @@ import hand from "./assets/hand.png";
 
 import { Button } from "@material-tailwind/react";
 import { motion, stagger } from "framer-motion";
-import cv from "./assets/jamal-frontend.pdf";
+import cv from "./assets/jamal-nabaa-frontend.pdf";
 const Hero = () => {
   const social = [
     <a
