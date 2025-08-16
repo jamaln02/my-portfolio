@@ -76,7 +76,7 @@ const Hero = () => {
           initial={{ x: -100, scale: 0 }}
           whileInView={{ x: 0, scale: 1, transition: { duration: 1.5 } }}
         >
-          <a href={cv} download target="_blank">
+          <a href={cv} download >
             {" "}
             <Button
               variant="gradient"
